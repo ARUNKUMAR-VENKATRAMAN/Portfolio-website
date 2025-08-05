@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arunkumar | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffffdd;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to right, #fefefe, #f4f4f4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      animation: slideIn 1s ease-out;
+      color: #222;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #555;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes slideIn {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+
+    .card {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .about, .skills, .projects, .certifications, .internship, .contact {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skills-list, .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list span, .cert-list span {
+      background: #e0e0e0;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#internship">Internship</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <img src="your-photo.jpg" alt="your-photo">
+    <h1>Arunkumar</h1>
+    <p>Front-End Developer | AWS Architech</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m a passionate front-end developer skilled in HTML, CSS, and JavaScript. I enjoy designing visually pleasing and user-friendly interfaces that work across devices.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Technical & Key Skills</h2>
+    <div class="card">
+      <h3>Technical Skills</h3>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>MySQL</span>
+        <span>AWS</span>
+        <span>MS office</SPAN>
+        <span>Git & GitHub</span>
+      </div>
+      <h3 style="margin-top: 20px;">Key Skills</h3>
+      <div class="skills-list">
+        <span>Team Collaboration</span>
+        <span>Leadership skills</span>
+        <span>Time Management</span>
+        <span>Communication</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Business intelligence dashboard</h3>
+        <p>Business intelligence dashboard for salesdata using amazon quicksight.</p>
+      </div>
+      <div class="project-card">
+        <h3>Air quality prediction app</h3>
+        <p>Responsive application for Predicting Air Quality Index(AQI) using flutter.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio showcasing projects and skills using HTML/CSS/JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <div class="card cert-list">
+      <span>Introduction to IoT-NPTEL Certification</span>
+      <span>SQL for Data science-Great learning</span>
+      <span>MySQL basics-Great learning</span>
+      <span>Basics of computer networkings-Great learning</span>
+      <span>Excel for begginers-Great learning</span>
+    </div>
+  </section>
+
+  <section id="internship" class="internship">
+    <h2>Internship</h2>
+    <div class="card">
+      <h3>AWS Intern at Vdart Solutions</h3>
+      <p>Collaborated with mentors and cross‑functional teams to deploy and monitor cloud resources, gaining hands‑on experience in AWS environments and operational best practices.</p>
+    </div>
+  </section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>📩Email</strong><br>
+      <a href="mailto:varunkamalam@gmail.com" style="color:#ff6f61;">varunkamalam@gmail.com</a>
+    </p>
+    <p><strong>📞Mobile</strong><br>
+      <a href="tel:+916380385322" style="color:#ff6f61;">+916380385322</a>
+    </p>
+    <p><strong>🌐LinkedIn</strong><br>
+      <a href="https://www.linkedin.com/in/arunkumar-v-0261b7324" target="_blank" style="color:#ff6f61;">
+        linkedin.com/in/arunkumar-v-0261b7324
+      </a>
+    </p>
+  </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input,
+    form textarea {
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      background: #fff;
+      color: #333;
+      resize: none;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #ff6f61;
+      outline: none;
+    }
+
+    form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #e15549;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Contact Form -->
+  <section>
+    <div class="card">
+      <h3>Send a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html
+<center>
+  <footer>
+    <p>&copy; 2025 Arunkumar. All rights reserved.</p>
+  </footer>
+ </center> 
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll('.about, .skills, .projects, .certifications, .internship, .contact');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
